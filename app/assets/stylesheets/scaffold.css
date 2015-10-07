@@ -1,0 +1,263 @@
+body { background-color: #fff; color: #F9EDB4; }
+
+body, p, ol, ul, td {
+  font-family: gotham, verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: white; }
+a:visited { color: white; }
+a:hover { color: #F9EDB4;  }
+
+div.field, div.actions {
+  margin-bottom: 10px;
+  width: 150px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+.home_link {
+  display: inline-block;
+  width: 30%;
+  position:relative;
+  left: 5%;
+  background-color: transparent;
+  border-style: none;
+  box-shadow: none;
+  font-size: 20px;
+  /*float: left;*/
+  margin-top: 20px;
+  /*margin-left: 40px;*/
+  text-align: center;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.new_link {
+  display: inline-block;
+  width: 30%;
+  position:relative;
+  left: 5%;
+  background-color: transparent;
+  border-style: none;
+  box-shadow: none;
+  font-size: 20px;
+  text-align: right;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 20px;
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+}
+
+.soundbaselogo {
+  display: inline-block;
+  width: 30%;
+  position:relative;
+  left: 5%;
+  background-color: transparent;
+  border-style: none;
+  box-shadow: none;
+  font-size: 20px;
+  text-align: left;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 20px;
+  /*float: right;*/
+
+}
+
+/*.soundbaselogo:hover {
+  color: gold;
+}*/
+
+.nav_bar {
+  height: 60px;
+  /*float: left;*/
+  /*width: 100%;*/
+  color: #fff;
+  background-color: rgba(0,0,0,.2);
+  border-bottom: 1px solid #adadad;
+  font-family: gotham;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  z-index: -1;
+}
+
+.description, .comment {
+  width: 360px;
+  text-align: left;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.entry {
+  margin: 0px auto 50px;
+  float: left;
+  width: 300px;
+}
+
+p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.voters {
+  margin-left: auto;
+  margin-right: auto;
+  width: 18px;
+}
+
+input[type="submit"]:nth-child(1) {
+  /*background-color: turquoise;*/
+}
+
+.show_sections {
+  margin-bottom: 50px;
+}
+
+.home_and_edit {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.image_home {
+  height: 220px;
+  width: 220px;
+  margin: 0px 40px;
+}
+
+.image_show {
+  height: 400px;
+  width: 400px;
+}
+
+.image_link:hover {
+  background-color: transparent;
+}
+
+.page_nav {
+  margin: 0px ;
+  /*width: 100%;*/
+  /*background: green;*/
+  /*text_align: center;*/
+}
+
+.page_nav_list {
+  padding: 0px;
+  text-align: center;
+}
+
+.page_nav_link {
+  float: none;
+  width: 95px;
+  display: inline-block;
+  margin: 30px 10px;
+  text-align: center;
+  background-color: transparent;
+  border-style: none;
+  box-shadow: none;
+}
+
+.clearing {
+  clear: both;
+}
+
+.new_back {
+  margin-top: 60px;
+  text-align: center;
+}
+
+div.comment {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timestamp {
+  text-align: right;
+  font-size: 10px;
+  font-style: italic;
+  margin: 0px;
+}
+
+.comment_field .comment_actions {
+  width:360px;
+}
+
+.new_review_head {
+  text-align: left;
+}
+
+.new_review {
+  width:360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#review_comment {
+  width: 360px;
+}
+
+.empty_space {
+
+  height: 120px;
+}
+
+.entries {
+  /*margin-left: 8em;*/
+
+  height: 100px;
+}
+
+/*.entries {
+  margin-left: 8em;
+
+}*/

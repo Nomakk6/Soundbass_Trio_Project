@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+<h1>Feed</h1>
+
+<div class="entries">
+  <% @playlists.each do |playlist| %>
+  <div class="entry">
+    <h3 class="title">
+      <%= playlist.name %>
+    </h3>
+    <div>
+      <% if (playlist.image === "") %>
+        <a class="image_link" href=<%= "/playlists/#{playlist.id}" %>><img class="image_home" src='http://www.ketlis.com/images/blue_play_button.png' alt:<%= playlist.name %> ></a>
+      <% else %>
+        <a class="image_link" href=<%= "/playlists/#{playlist.id}" %>><img class="image_home" src=<%= playlist.image %> alt:<%= playlist.name %> ></a>
+      <% end %>
+    </div>
+    <p>
+      <%= pluralize((playlist.votes.count-playlist.downvotes.count), "vote") %>
+      <div class="voters">
+        <%= button_to '/\\', upvote_playlist_path(playlist), method: :post %>
+        <%= button_to '\\/', downvote_playlist_path(playlist), method: :post %>
+      </div>
+    </p>
+  </div>
+  <!-- <div class="more-btn-container"> -->
+    <!-- <a class="more-btn" href="#">More</a> -->
+    <!-- <ul class="more-menu"> -->
+      <!-- <li><%= link_to 'Show', playlist %></li> -->
+      <!-- <li><%= link_to 'Edit', edit_playlist_path(playlist) %></li> -->
+      <!-- <li><%= link_to 'Destroy', playlist, method: :delete, data: { confirm: 'Are you sure?' } %></li> -->
+    <!-- </ul> -->
+  <!-- </div> -->
+<% end %>
+</div>
+<br/>
+<div class="clearing">
+  <div class="page_nav">
+    <ul class="page_nav_list">
+      <% unless (@page == 1) %>
+        <li class="page_nav_link"><%= link_to 'Previous page', page: @page - 1 %></li>
+      <% end %>
+      <% unless ((@page * @offset)>=(Playlist.all.length)) %>
+        <li class="page_nav_link"><%= link_to 'Next page', page: @page + 1 %></li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
+
+
+
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+      <th>Image</th>
+      <th>Description</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @playlists.each do |playlist| %>
+      <tr>
+        <td><%= playlist.name %></td>
+        <td><%= playlist.url %></td>
+        <td><%= image_tag playlist.image %></td>
+        <td><%= playlist.description %></td>
+        <td><%= playlist.comment %></td>
+        <td><%= link_to 'Show', playlist %></td>
+        <td><%= link_to 'Edit', edit_playlist_path(playlist) %></td>
+        <td><%= link_to 'Destroy', playlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table> -->
+
+<!-- <br>
+<p class="new_link">
+  <%= link_to 'New Playlist', new_playlist_path %>
+</p> -->

@@ -1,0 +1,45 @@
+<body class = "soundbaseimage">
+<h1 class= "soundbase">SoundBase</h1>
+
+<div>
+<h2 class = "signupmaster">
+<%= link_to 'Sign Up', new_user_registration_path %>
+</h2>
+
+<div>
+<h2 class = "loginmaster">
+<% if current_user.nil? %>
+  <%= link_to 'Log In', new_user_session_path %>
+<% else %>
+  <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+<% end %>
+
+</h2>
+<div class = "facebooklogin">
+<%#= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+  <% if current_user.nil? %>
+    <%= link_to user_omniauth_authorize_path(:facebook) do %>
+    <%= image_tag ('facebooklogin.png') %>
+  <%end%>
+<% end %>
+
+<div class = "blurbmaster">
+<p class = "blurb">Share Your Favorite Playlists</p>
+<p class = "blurb2">Listen to the World's Sounds</p>
+<p class = "blurb3">Discover New Tracks</p>
+</div>
+
+
+<div class='musico'>
+  <ul>
+    <li class='bar1'></li>
+    <li class='bar2'></li>
+    <li class='bar3'></li>
+    <li class='bar4'></li>
+    <li class='bar5'></li>
+  </ul>
+</div>
+<div class="empty_space">
+<br>
+</div>
+</body>

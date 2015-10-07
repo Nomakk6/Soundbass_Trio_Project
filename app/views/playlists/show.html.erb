@@ -1,0 +1,65 @@
+<!-- <ul class="nav_bar">
+  <li class="soundbaselogo">
+    <%= link_to 'SoundBase', welcome_index_path %>
+  </li>
+  <li class="home_link">
+    <%= link_to 'Feed', playlists_path %>
+  </li>
+  <li class="new_link">
+    <%= link_to 'New Playlist', new_playlist_path %>
+  </li>
+  </ul> -->
+
+<p id="notice"><%= notice %></p>
+
+<h2 class="show_sections">
+  <%= @playlist.name %>
+</h2>
+
+<p class="show_sections">
+  <!-- <strong>Image:</strong> -->
+  <% if (@playlist.image == "") %>
+    <img class="image_show" src='http://www.ketlis.com/images/blue_play_button.png' alt:<%= @playlist.name %> >
+  <% else %>
+    <img class="image_show" src=<%= @playlist.image %> alt:<%= @playlist.name %> >
+  <% end %>
+</p>
+
+<p class="show_sections">
+  <strong>Playlist URL:</strong>
+  <a href=<%= @playlist.url %>><%= (@playlist.url).truncate(43) %></a>
+</p>
+
+<% if !(@playlist.description == "") %>
+  <p class="description show_sections">
+      <strong>Description:</strong>
+      <%= @playlist.description %>
+  </p>
+<% end %>
+
+<!-- <p class="show_sections">
+  <strong>Comment:</strong>
+  <%= @playlist.comment %>
+</p> -->
+<div class="comment">
+  <h3 class="new_review_head">New Review</h3>
+</div>
+<%= render 'reviews/form' %>
+
+<h3>Reviews:</h3>
+
+<% @playlist.reviews.each do |review| %>
+  <div class="comment show_sections">
+    <%= review.comment %>
+    <br>
+    <p class="timestamp">Added on: <%= review.created_at %></p>
+  </div>
+<% end %>
+
+<div class="home_and_edit">
+  <!-- <% if (notice == "Playlist was successfully created.") || (notice == "Playlist was successfully updated.") %>
+    <%= link_to 'Edit', edit_playlist_path(@playlist) %> |
+    <%= link_to 'Destroy', @playlist, method: :delete, data: { confirm: 'Are you sure?' } %> |
+  <% end %> -->
+  <%= link_to 'Home', playlists_path %>
+</div>
